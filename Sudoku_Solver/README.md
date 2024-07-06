@@ -3,7 +3,7 @@
 I recently started taking interest in playing and studying combinatorial games, like Sudoku, chess, 2048, etc. Among these, Sudoku has fascinated me with its blend of logic and combinatorial strategy. This motivated me to build a real-time Sudoku solver that can solve any Sudoku puzzle from an image.
 The motivation behind this project is to combine my interest in combinatorial games with practical applications of computer vision and algorithm design. By creating a real-time Sudoku solver, I aim to deepen my understanding of image processing techniques and combinatorial problem-solving strategies.
 
-![img]()
+![img](./imgs/1.webp)
 
 #### Did You Know?
 
@@ -17,6 +17,9 @@ This project is divided into two main modules:
 
 1. **Sudoku Solver Module**:
    * The Sudoku Solver module takes the 2D matrix from the CV module and solves the puzzle. This module implements an efficient algorithm to solve the Sudoku puzzle and returns the completed board.
+     In order to optimize performance solver is written in C++ and then uses as an API with python (Planned for now there is a brute force python solver)).
+
+     ![img](./imgs/solver.png)
 2. **CV Module (***Planned***)**:
    * The Computer Vision (CV) module is responsible for extracting the Sudoku board from an image. It processes the input image, detects the Sudoku grid, and extracts a 2D matrix representing the board.
 
@@ -60,6 +63,7 @@ The project consists of the following components:
 ## References
 
 * [https://www.geeksforgeeks.org/sudoku-backtracking-7/ ](https://www.geeksforgeeks.org/sudoku-backtracking-7/): Good resource comparing varous algorithms for solving
+* [https://dlbeer.co.nz/articles/sudoku.html](https://dlbeer.co.nz/articles/sudoku.html): Understanding generators
 
 ## How you can develop on this?
 
