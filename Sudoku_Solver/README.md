@@ -16,12 +16,17 @@ Generating sudoku boards is tougher problem than solving it ! `😥`
 This project is divided into two main modules:
 
 1. **Sudoku Solver Module**:
+
    * The Sudoku Solver module takes the 2D matrix from the CV module and solves the puzzle. This module implements an efficient algorithm to solve the Sudoku puzzle and returns the completed board.
      In order to optimize performance solver is written in C++ and then uses as an API with python (Planned for now there is a brute force python solver)).
 
      ![img](./imgs/solver.png)
 2. **CV Module (***Planned***)**:
+
    * The Computer Vision (CV) module is responsible for extracting the Sudoku board from an image. It processes the input image, detects the Sudoku grid, and extracts a 2D matrix representing the board.
+   * This module was tougher than I thought. Developing a general solution is very challenging and i believe is still an open problem. Handling all POVs of board and lighting levels is very difficult task.
+
+![Alt text](./imgs/CV_pipeline.png "CV")
 
 ## Project Structure
 
@@ -47,17 +52,19 @@ The project consists of the following components:
    - Execute the main script with an image file containing a Sudoku puzzle:
 
      ```bash
-     python main.py -p <path-to-sudoku-image>
+     python main.py -i <path-to-sudoku-image>
 
      		OR
 
-     python main.py --path <path-to-sudoku-image>
+     python main.py --image <path-to-sudoku-image>
      ```
 
 ## Dependencies
 
 - OpenCV
 - NumPy
+- Tensorflow
+- Tesseract
 - Other dependencies as listed in `requirements.txt`
 
 ## References
